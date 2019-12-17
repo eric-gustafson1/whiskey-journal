@@ -1,9 +1,8 @@
-// Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+'use strict';
 
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Dropdowns in navbar
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function (example) {
@@ -38,42 +37,60 @@ var refreshExamples = function () {
         .text(example.text)
         .attr("href", "/example/" + example.id);
 
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        .append($a);
+  var $dropdowns = getAll('.navbar-item.has-dropdown:not(.is-hoverable)');
 
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
-
-      $li.append($button);
-
-      return $li;
+  if ($dropdowns.length > 0) {
+    $dropdowns.forEach(function ($el) {
+      $el.addEventListener('click', function (event) {
+        event.stopPropagation();
+        $el.classList.toggle('is-active');
+      });
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
-  });
-};
+    document.addEventListener('click', function (event) {
+      closeDropdowns();
+    });
+  }
 
+  function closeDropdowns() {
+    $dropdowns.forEach(function ($el) {
+      $el.classList.remove('is-active');
+    });
+  }
+
+  // Close dropdowns if ESC pressed
+  document.addEventListener('keydown', function (event) {
+    var e = event || window.event;
+    if (e.keyCode === 27) {
+      closeDropdowns();
+    }
+  });
+
+  // Toggles
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function (event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
-  };
+  var $burgers = getAll('.burger');
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
+  if ($burgers.length > 0) {
+    $burgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
   }
 
+  // Functions
+
+  function getAll(selector) {
+    return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
+  }
+});
   API.saveExample(example).then(function () {
     refreshExamples();
   });
