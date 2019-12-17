@@ -5,10 +5,74 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Home Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title>Whiskey Journal</title>
 </head>
 
 <body>
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <h1 class="navbar-item has-text-weight-semibold is-family-serif">Whiskey Journal</h1>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        {{!-- <div class="navbar-item has-dropdown"> --}}
+          <a class="navbar-item" href="main.handlebars">
+            Home
+          </a>
+          <a class="navbar-item" href="main.handlebars">
+            Add
+          </a>
+          <a class="navbar-item" href="main.handlebars">
+            View
+          </a>
+          <a class="navbar-item" href="main.handlebars">
+            Discover
+          </a>
+        {{!-- </div> --}}
+        {{!-- <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/documentation/overview/start/">
+            Docs
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="/documentation/overview/start/">
+              Overview
+            </a>
+            <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+              Modifiers
+            </a>
+            <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+              Columns
+            </a>
+            <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+              Layout
+            </a>
+            <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+              Form
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+              Elements
+            </a>
+            <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+              Components
+            </a>
+          </div> --}}
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <a href="login.html" class="navbar-item">Login</a>
+    </div>
+    </div>
+  </nav>
   {{{body}}}
 </body>
 
