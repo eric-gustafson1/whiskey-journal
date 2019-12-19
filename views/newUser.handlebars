@@ -35,17 +35,19 @@
     <p class="help is-danger">This email is invalid</p>
 </div> --}}
 
-    {{!-- <div class="field">
-    <label class="label">Subject</label>
-    <div class="control">
-        <div class="select">
-            <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-            </select>
+    <div class="field">
+        <label class="label">Over 21?</label>
+        <div class="control">
+            <div class="select">
+                <select id="over21">
+                    <option value="1">YES</option>
+                    <option value="0">NO </option>
+                </select>
+            </div>
         </div>
     </div>
-</div> --}}
+
+
 
     {{!-- <div class="field">
     <label class="label">Message</label>
@@ -63,19 +65,19 @@
     </div>
 </div> --}}
 
-    <div class="field">
+    {{!-- <div class="field">
         <div class="control">
             <label class="radio">
                 Over 21?
-                <input id="over21" type="radio" name="question">
+                <input class="over21" value="1" type="radio" name="question">
                 Yes
             </label>
             <label class="radio">
-                <input type="radio" name="question">
+                <input class="over21" type="radio" value="0" name="question">
                 No
             </label>
         </div>
-    </div>
+    </div> --}}
 
     <div class="field is-grouped">
         <div class="control">
@@ -86,3 +88,5 @@
         </div>
     </div>
 </form>
+
+<script src="js/user.js" type="text/javascript"></script>
