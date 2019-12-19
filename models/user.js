@@ -7,12 +7,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    dob: {
-        type: DataTypes.DATE,
+    over21: {
+        type: DataTypes.BOOLEAN,
         allowNull: false,
-        validate: {
-          len: [8,8]
-        }
+        defaultValue: false
       },
   });
 
