@@ -56,8 +56,9 @@ module.exports = function (app) {
   // }
 
   app.post("/api/addWhiskey", function (req, res) {
+    console.log(req.body)
     db.Whiskey.create(req.body).then(function (dbAddWhiskey) {
-      res.json(dbAddWhiskey);
+      // res.json(dbAddWhiskey);
     });
   });
 
