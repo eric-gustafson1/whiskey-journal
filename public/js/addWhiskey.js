@@ -1,30 +1,30 @@
 
 $(document).ready(function () {
 
-    let username = $('#username');
-    let over21;
+    let whiskeyName = $('#whiskeyname');
+    let price = $('#price');
 
-    $(document).on('submit', '#adduser-form', function (event) {
+    $(document).on('submit', '#addwhiskey-form', function (event) {
         event.preventDefault();
-        // console.log('submit on form')
-        // console.log(username.val());
-        // console.log($('#over21').find(':selected').val());
-        over21 = $('#over21').find(':selected').val();
+        let whiskeyType = $('#whiskeyType').find(':selected').text();
+        console.log($('#whiskeyType').find(':selected').text())
+        console.log(whiskeyName.val())
+        console.log(price.val())
 
-        if (!username.val().trim().trim()) {
+        if (!whiskeyName.val().trim().trim()) {
             return;
         }
 
-        createUser({
-            name: username.val().trim(),
-            over21: over21
-
+        createWhiskey({
+            name: whiskeyName.val().trim(),
+            type: whiskeyType,
+            price: price.val().trim()
         })
     })
 
-    function createUser(whiskeyData) {
-        $.post("/api/addWhiskey", whiskeyData)
+    function createWhiskey(whiskeyData) {
         console.log(whiskeyData)
+        $.post("/api/addWhiskey", whiskeyData)
 
     }
 
