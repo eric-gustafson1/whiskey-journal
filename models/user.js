@@ -8,10 +8,10 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     over21: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false
-      },
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
   });
 
   User.associate = function (models) {

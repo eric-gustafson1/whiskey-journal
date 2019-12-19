@@ -65,11 +65,11 @@ module.exports = function (app) {
   // Tested with Postman successfully
   // {
   //   "name": "Eric",
-  //   "dob": "1987-02-18"
+  //   "over21": "1"
   // },
   // {
   //   "name": "Kelli",
-  //   "dob": "1980-08-14"
+  //   "over21": "1"
   // }
   app.post("/api/addUser", function (req, res) {
     console.log(req.body)
