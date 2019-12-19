@@ -7,21 +7,11 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-<<<<<<< HEAD
     over21: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false
-      },
-=======
-    dob: {
-      type: DataTypes.DATE,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
-      validate: {
-        len: [8, 8]
-      }
+      defaultValue: false
     },
->>>>>>> master
   });
 
   User.associate = function (models) {
