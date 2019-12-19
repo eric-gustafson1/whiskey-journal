@@ -10,7 +10,10 @@ module.exports = function (app) {
 
   app.get("/addUser", function (req, res) {
     res.render('newUser')
-    // res.sendFile(path.join(_ _dirname, '../views/newUser.handlebars'));
+  });
+
+  app.get("/addWhiskey", function (req, res) {
+    res.render('newWhiskey')
   });
 
   // Load example page and pass in an example by id
