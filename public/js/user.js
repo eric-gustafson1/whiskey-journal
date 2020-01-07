@@ -5,7 +5,7 @@ $(document).ready(function () {
     let over21;
 
     $(document).on('submit', '#adduser-form', function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         over21 = $('#over21').find(':selected').val();
 
         if (!username.val().trim().trim()) {
