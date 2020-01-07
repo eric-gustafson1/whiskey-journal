@@ -16,13 +16,25 @@
 }
 
 #discover-form {
-  padding-top: 2rem;
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #new-whiskey-form {
-  padding-top: 2rem;
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #new-user-form {
-  padding-top: 2rem;
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#view-container {
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
 }

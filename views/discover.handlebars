@@ -11,21 +11,21 @@
         <br><br>
         <button type="submit" class="button is-link">Discover</button>
     </form>
-</div>
 
-{{#if hasData}}
-<div class="container is-centered" id="whiskey-info">
-    <div class="columns">
-        <div class="column">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        {{topic}}
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        {{summary}}
+    {{#if hasData}}
+    <div class="container is-centered" id="whiskey-info">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            {{topic}}
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            {{summary}}
+                        </div>
                     </div>
                 </div>
             </div>
