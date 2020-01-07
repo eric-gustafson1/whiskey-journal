@@ -1,32 +1,37 @@
-<form action="/discover/topic" method="POST">
-    <label class="label has-text-white">Select a Type of Whiskey to Discover more...</label>
-    <select name="topic" id="whiskeyType">
-        <option value="Bourbon whiskey">Bourbon whiskey</option>
-        <option value="Rye whiskey">Rye whiskey</option>
-        <option value="Sour mash">Sour Mash</option>
-        <option value="Scotch whisky">Scotch whiskey</option>
-        <option value="Irish whiskey">Irish whiskey</option>
-    </select>
-    <br><br>
-    <button type="submit" class="button is-link">Discover</button>
+<div class="container" id="discover-form">
+    <form action="/discover/topic" method="POST">
+        <label class="label has-text-white is-large">Select a Type of Whiskey to Discover More...</label>
+        <select name="topic" id="whiskeyType">
+            <option value="Bourbon whiskey">Bourbon whiskey</option>
+            <option value="Rye whiskey">Rye whiskey</option>
+            <option value="Sour mash">Sour Mash</option>
+            <option value="Scotch whisky">Scotch whiskey</option>
+            <option value="Irish whiskey">Irish whiskey</option>
+        </select>
+        <br><br>
+        <button type="submit" class="button is-link">Discover</button>
+    </form>
 
-</form>
-
-{{#if hasData}}
-
-<div class="card">
-    <header class="card-header">
-        <p class="card-header-title">
-            {{topic}}
-        </p>
-    </header>
-    <div class="card-content">
-        <div class="content">
-            {{summary}}
+    {{#if hasData}}
+    <div class="container is-centered" id="whiskey-info">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            {{topic}}
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            {{summary}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 {{/if}}
 
 <script src="js/discover.js" type="text/javascript"></script>

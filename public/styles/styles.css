@@ -10,3 +10,31 @@
   background-size:  cover;
   height: 100vh;
 }
+
+#whiskey-info {
+  margin-top: 2rem;
+}
+
+#discover-form {
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#new-whiskey-form {
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#new-user-form {
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#view-container {
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
