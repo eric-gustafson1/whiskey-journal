@@ -30,6 +30,13 @@ module.exports = function (app) {
     });
   });
 
+  app.post("/api/addReview", function (req, res) {
+    console.log(req.body)
+    db.Review.create(req.body).then(function (dbAddWhiskey) {
+      // res.json(dbAddWhiskey);
+    });
+  });
+
   app.post("/api/addUser", function (req, res) {
     console.log(req.body)
     db.User.create(req.body).then(function (dbAddUser) {
