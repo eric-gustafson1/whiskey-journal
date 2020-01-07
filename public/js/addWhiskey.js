@@ -27,5 +27,4 @@ $(document).ready(function () {
         $.post("/api/addWhiskey", whiskeyData)
 
     }
-
 })

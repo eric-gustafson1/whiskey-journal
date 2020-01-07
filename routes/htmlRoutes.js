@@ -1,9 +1,11 @@
 var db = require("../models");
-require('../views/')
+require('../views/');
+const wiki = require('wikijs').default;
+
+let discoverTopic = [];
+let discoverSummary;
 
 module.exports = function (app) {
-  // Load index page
-
   app.get("/", function (req, res) {
     res.render("index");
   });
@@ -12,17 +14,38 @@ module.exports = function (app) {
     res.render('newUser')
   });
 
-  app.get("/addWhiskey", function (req, res) {
-    res.render('newWhiskey')
+
+  // Discover Page route
+  app.get("/discover", function (req, res) {
+    whiskeyTopic = discoverTopic[0]
+    res.render('discover', {
+      topic: whiskeyTopic,
+      summary: discoverSummary,
+      hasData: discoverTopic.length > 0
+    });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  // Discover/topic Page route
+  app.post("/discover/topic", function (req, res) {
+    console.log(req.body)
+    discoverTopic = [];
+    discoverTopic.push(req.body.topic);
+    console.log('htmlRoutes: topic is ', discoverTopic);
+
+    wiki(discoverTopic)
+      .page(discoverTopic)
+      .then(page => page.summary())
+      .then(function (data) {
+        discoverSummary = data;
+        res.redirect('/discover');
+        console.log('redirect')
+      })
+
+  });
+
+  // Add whiskey page
+  app.get("/addWhiskey", function (req, res) {
+    res.render('newWhiskey');
   });
 
   // Render 404 page for any unmatched routes
@@ -30,34 +53,3 @@ module.exports = function (app) {
     res.render("404");
   });
 };
-
-
-// var path = require("path");
-
-// // Routes
-// // =============================================================
-// module.exports = function(app) {
-
-//   // Each of the below routes just handles the HTML page that the user gets sent to.
-
-//   // index route loads view.html
-//   app.get("/", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/blog.html"));
-//   });
-
-//   // cms route loads cms.html
-//   app.get("/cms", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/cms.html"));
-//   });
-
-//   // blog route loads blog.html
-//   app.get("/blog", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/blog.html"));
-//   });
-
-//   // authors route loads author-manager.html
-//   app.get("/authors", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/author-manager.html"));
-//   });
-
-// };
