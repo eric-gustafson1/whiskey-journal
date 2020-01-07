@@ -60,4 +60,19 @@ module.exports = function (app) {
       res.json(dbExample);
     });
   });
+
+  // app.get("/api/users", function (req, res) {
+  //   // Add a join to include all of each Author's Posts
+  //   db.User.findAll({
+  //   }).then(function (dbUsers) {
+  //     res.json(dbUsers);
+  //     let usersArray = []
+  //     console.log()
+
+  //     for (let i = 0; i < dbUsers.length; i++) {
+  //       usersArray.push({ id: dbUsers[i].id, name: dbUsers[i].name })
+  //     }
+  //     console.log(usersArray);
+  //   });
+  // });
 };

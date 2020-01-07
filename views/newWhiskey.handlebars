@@ -1,11 +1,11 @@
 <form id="addwhiskey-form">
 
     <div class="field">
-        <label class="label">Whiskey Name</label>
+        <label class="label has-text-white">Whiskey Name</label>
         <div class="control">
             <input id="whiskeyname" class="input" type="text" placeholder="Text input">
         </div>
-        <label class="label">Whiskey Price</label>
+        <label class="label has-text-white">Whiskey Price</label>
         <div class="control">
             <input id="price" class="input" type="text" placeholder="Text input">
         </div>
@@ -40,7 +40,7 @@
 </div> --}}
 
     <div class="field">
-        <label class="label">Type</label>
+        <label class="label has-text-white">Type</label>
         <div class="control">
             <div class="select">
                 <select id="whiskeyType">
@@ -87,13 +87,13 @@
     </div> --}}
 
     <div class="field">
-        <label class="label">Tasting Notes</label>
+        <label class="label has-text-white">Tasting Notes</label>
         <div class="control">
             <textarea id="whiskeyReview" class="textarea" placeholder="How was it?"></textarea>
         </div>
     </div>
     <div class="field">
-        <label class="label">Type</label>
+        <label class="label has-text-white">Type</label>
         <div class="control">
             <div class="select">
                 <select id="whiskeyRating">
@@ -106,6 +106,22 @@
             </div>
         </div>
     </div>
+
+    {{!-- Dynamically add users to select dropdown --}}
+    <div class="field">
+        <label class="label has-text-white">Select a User</label>
+        <div class="control">
+            <div class="select">
+                <select name="user" id="user">
+                    {{#each users}}
+                    <option value={{id}}> {{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+        </div>
+    </div>
+
 
     <div class="field is-grouped">
         <div class="control">
