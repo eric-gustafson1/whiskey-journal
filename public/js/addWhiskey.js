@@ -3,12 +3,15 @@ $(document).ready(function () {
 
     let whiskeyName = $('#whiskeyname');
     let price = $('#price');
-    let whiskeyReview = $('#whiskeyReview');
+    
 
     $(document).on('submit', '#addwhiskey-form', function (event) {
         event.preventDefault();
         let whiskeyType = $('#whiskeyType').find(':selected').text();
         let whiskeyRating = parseInt($('#whiskeyRating').find(':selected').text());
+        let whiskeyReview = $('#whiskeyReview').val();
+        console.log(whiskeyRating);
+        console.log(whiskeyReview);
 
         if (!whiskeyName.val().trim().trim()) {
             return;
