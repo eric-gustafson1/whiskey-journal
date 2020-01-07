@@ -10,3 +10,19 @@
   background-size:  cover;
   height: 100vh;
 }
+
+#whiskey-info {
+  margin-top: 2rem;
+}
+
+#discover-form {
+  padding-top: 2rem;
+}
+
+#new-whiskey-form {
+  padding-top: 2rem;
+}
+
+#new-user-form {
+  padding-top: 2rem;
+}
