@@ -6,9 +6,6 @@ $(document).ready(function () {
 
     $(document).on('submit', '#adduser-form', function (event) {
         event.preventDefault();
-        // console.log('submit on form')
-        // console.log(username.val());
-        // console.log($('#over21').find(':selected').val());
         over21 = $('#over21').find(':selected').val();
 
         if (!username.val().trim().trim()) {
