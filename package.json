@@ -4,7 +4,7 @@
   "description": "Project 2 Starter",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
     "test": "npm run lint && cross-env NODE_ENV=test mocha -u bdd --reporter spec --exit"
@@ -19,7 +19,8 @@
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
     "path": "^0.12.7",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.3",
+    "wikijs": "^6.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

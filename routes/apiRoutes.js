@@ -22,38 +22,6 @@ module.exports = function (app) {
     });
   });
 
-  // Example that can be used to order the View by a column
-  // app.get('/:store', (req, res) => {
-  //     let store = req.params.store;
-
-  //     connection.query('SELECT * FROM groceries WHERE store = ?', [store], (err, data) => {
-  //         if (err) {
-  //             return res.statusCode(500).end();
-  //         }
-  //         res.render('index', { groceries: data })
-  //     })
-
-  // })
-
-  // Get data for the Discover page from Wiki API
-  app.get("/api/discover", function (req, res) {
-    db.whiskey.findAll({}).then(function (dbView) {
-      res.json(dbView);
-    });
-  });
-
-  // Create a new whiskey
-  // Tested with Postman successfully
-  // {
-  //   "name": "Tin Cup",
-  //   "type": "Whiskey",
-  //   "price": "34.78"
-  // },
-  // {
-  //   "name": "TX",
-  //   "type": "Whiskey",
-  //   "price": "33.99"
-  // }
 
   app.post("/api/addWhiskey", function (req, res) {
     console.log(req.body)
@@ -62,16 +30,6 @@ module.exports = function (app) {
     });
   });
 
-  // Create a new User
-  // Tested with Postman successfully
-  // {
-  //   "name": "Eric",
-  //   "over21": "1"
-  // },
-  // {
-  //   "name": "Kelli",
-  //   "over21": "1"
-  // }
   app.post("/api/addUser", function (req, res) {
     console.log(req.body)
     db.User.create(req.body).then(function (dbAddUser) {
@@ -80,14 +38,6 @@ module.exports = function (app) {
     });
   });
 
-  // Create new Review
-  // Tested with Postman successfully
-  //{
-  // 	"body": "ipsom ooftsem",
-  // 	"rating": "3",
-  // 	"UserId": "1",
-  // 	"WhiskeyId": "2"
-  // }
   app.post("/api/addReview", function (req, res) {
     console.log(req.body)
     db.Review.create(req.body).then(function (dbAddReview) {
