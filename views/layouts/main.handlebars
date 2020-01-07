@@ -26,11 +26,14 @@
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-start">
         {{!-- <div class="navbar-item has-dropdown"> --}}
-        <a class="navbar-item" href="main.handlebars">
+        <a class="navbar-item" href="/">
           Home
         </a>
         <a class="navbar-item" href="/addUser">
           Add User
+        </a>
+        <a class="navbar-item" href="/addWhiskey">
+          Add Whiskey
         </a>
         <a class="navbar-item" href="/viewReviews">
           View
@@ -75,8 +78,9 @@
     </div>
     </div>
   </nav>
-  {{{body}}}
-
+  <div class="bg-img">
+    {{{body}}}
+  </div>
 </body>
 
 </html>
