@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
           },
           favorite: {
             type: DataTypes.BOOLEAN,
-            allowNull: false,
+            allowNull: true,
             defaultValue: false,
             validate: {
               len: [1]
@@ -28,13 +28,13 @@ module.exports = function(sequelize, DataTypes) {
       
       Review.belongsTo(models.User, {
         foreignKey: {
-            allowNull: false
+            allowNull: true
           }
       });
 
       Review.belongsTo(models.Whiskey, {
         foreignKey: {
-            allowNull: false
+            allowNull: true
           }
       });
     };
