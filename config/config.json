@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Guster1467",
     "database": "whiskeyJournal",
     "host": "localhost",
     "dialect": "mysql"
