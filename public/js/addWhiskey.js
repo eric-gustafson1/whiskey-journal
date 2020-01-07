@@ -27,7 +27,7 @@ $(document).ready(function () {
     })
 
     function createWhiskey(whiskeyData) {
-        console.log("This is your "+ whiskeyData)
+        console.log("This is your " + whiskeyData)
         $.post("/api/addWhiskey", whiskeyData)
     }
 
@@ -35,4 +35,29 @@ $(document).ready(function () {
         console.log(reviewData)
         $.post("/api/addReview", reviewData)
     }
+
+    // Function for retrieving authors and getting them ready to be rendered to the page
+    //   function getAuthors() {
+    //     $.get("/api/authors", function(data) {
+    //       var rowsToAdd = [];
+    //       for (var i = 0; i < data.length; i++) {
+    //         rowsToAdd.push(createAuthorRow(data[i]));
+    //       }
+    //       renderAuthorList(rowsToAdd);
+    //       nameInput.val("");
+    //     });
+    //   }
+
+    // Function for retrieving authors and getting them ready to be rendered to the page
+    function getUsers() {
+        $.get("/api/users", function (data) {
+            // var usersArray = [];
+            // for (var i = 0; i < data.length; i++) {
+            //     usersArray.push(createAuthorRow(data[i]));
+            // }
+            // renderAuthorList(rowsToAdd);
+            // nameInput.val("");
+        });
+    }
+    getUsers();
 })
