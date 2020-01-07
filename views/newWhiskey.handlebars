@@ -12,34 +12,6 @@
             </div>
         </div>
 
-        {{!-- <div class="field">
-    <label class="label">Username</label>
-    <div class="control has-icons-left has-icons-right">
-        <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-        <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-        </span>
-        <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-        </span>
-    </div>
-    <p class="help is-success">This username is available</p>
-</div> --}}
-
-        {{!-- <div class="field">
-    <label class="label">Email</label>
-    <div class="control has-icons-left has-icons-right">
-        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-        <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-        </span>
-        <span class="icon is-small is-right">
-            <i class="fas fa-exclamation-triangle"></i>
-        </span>
-    </div>
-    <p class="help is-danger">This email is invalid</p>
-</div> --}}
-
         <div class="field">
             <label class="label has-text-white">Type</label>
             <div class="control">
@@ -55,45 +27,33 @@
             </div>
         </div>
 
-
-
-        {{!-- <div class="field">
-    <label class="label">Message</label>
-    <div class="control">
-        <textarea class="textarea" placeholder="Textarea"></textarea>
-    </div>
-</div> --}}
-
-        {{!-- <div class="field">
-    <div class="control">
-        <label class="checkbox">
-            <input type="checkbox">
-            I agree to the <a href="#">terms and conditions</a>
-        </label>
-    </div>
-</div> --}}
-
-        {{!-- <div class="field">
+    <div class="field">
+        <label class="label has-text-white">Tasting Notes</label>
         <div class="control">
-            <label class="radio">
-                Over 21?
-                <input class="over21" value="1" type="radio" name="question">
-                Yes
-            </label>
-            <label class="radio">
-                <input class="over21" type="radio" value="0" name="question">
-                No
-            </label>
+            <textarea id="whiskeyReview" class="textarea" placeholder="How was it?"></textarea>
         </div>
-    </div> --}}
+    </div>
+    <div class="field">
+        <label class="label has-text-white">Rating</label>
+        <div class="control">
+            <div class="select">
+                <select id="whiskeyRating">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
-        <div class="field is-grouped">
-            <div class="control">
-                <button class="button is-link">Submit</button>
-            </div>
-            <div class="control">
-                <button class="button is-link is-light">Cancel</button>
-            </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+            <button class="button is-link is-light">Cancel</button>
         </div>
     </form>
 </div>
