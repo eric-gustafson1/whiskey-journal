@@ -6,7 +6,6 @@ $(document).ready(function () {
     
 
     $(document).on('submit', '#addwhiskey-form', function (event) {
-        event.preventDefault();
         let whiskeyType = $('#whiskeyType').find(':selected').text();
         let whiskeyRating = parseInt($('#whiskeyRating').find(':selected').text());
         let whiskeyReview = $('#whiskeyReview').val();
