@@ -20,10 +20,7 @@ $(document).ready(function () {
         createWhiskey({
             name: whiskeyName.val().trim(),
             type: whiskeyType,
-            price: price.val().trim()
-        })
-
-        createReview({
+            price: price.val().trim(),
             body: whiskeyReview,
             rating: whiskeyRating,
         })
@@ -34,33 +31,4 @@ $(document).ready(function () {
         $.post("/api/addWhiskey", whiskeyData)
     }
 
-    function createReview(reviewData) {
-        console.log(reviewData)
-        $.post("/api/addReview", reviewData)
-    }
-
-    // Function for retrieving authors and getting them ready to be rendered to the page
-    //   function getAuthors() {
-    //     $.get("/api/authors", function(data) {
-    //       var rowsToAdd = [];
-    //       for (var i = 0; i < data.length; i++) {
-    //         rowsToAdd.push(createAuthorRow(data[i]));
-    //       }
-    //       renderAuthorList(rowsToAdd);
-    //       nameInput.val("");
-    //     });
-    //   }
-
-    // Function for retrieving authors and getting them ready to be rendered to the page
-    function getUsers() {
-        $.get("/api/users", function (data) {
-            // var usersArray = [];
-            // for (var i = 0; i < data.length; i++) {
-            //     usersArray.push(createAuthorRow(data[i]));
-            // }
-            // renderAuthorList(rowsToAdd);
-            // nameInput.val("");
-        });
-    }
-    getUsers();
 })
