@@ -11,7 +11,13 @@ module.exports = function (app) {
   });
 
   app.get("/viewWhiskeys", function (req, res) {
-    res.render('viewWhiskeys')
+    db.Whiskey.findAll({
+    }).then(function (dbWhiskeys) {
+      console.log(dbWhiskeys);
+      res.render('viewWhiskeys',{
+        whiskeys: dbWhiskeys
+      })
+    })
   });
 
 
