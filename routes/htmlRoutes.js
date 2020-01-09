@@ -10,8 +10,8 @@ module.exports = function (app) {
     res.render("index");
   });
 
-  app.get("/addUser", function (req, res) {
-    res.render('newUser')
+  app.get("/viewWhiskeys", function (req, res) {
+    res.render('viewWhiskeys')
   });
 
 
