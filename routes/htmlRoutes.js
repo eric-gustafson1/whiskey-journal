@@ -45,21 +45,8 @@ module.exports = function (app) {
 
   // Add whiskey page
   app.get("/addWhiskey", function (req, res) {
-    let usersArray = []
-
-    db.User.findAll({
-    }).then(function (dbUsers) {
-      for (let i = 0; i < dbUsers.length; i++) {
-        usersArray.push({ id: dbUsers[i].id, name: dbUsers[i].name })
-      }
-    }).then(function () {
-      console.log(usersArray);
-      res.render('newWhiskey', {
-        users: usersArray
-      })
-    })
-
-  });
+      res.render('newWhiskey');
+    });
 
 
   // Render 404 page for any unmatched routes

@@ -48,22 +48,6 @@
         </div>
     </div>
 
-    {{!-- Dynamically add users to select dropdown --}}
-    <div class="field">
-        <label class="label has-text-white">Select a User</label>
-        <div class="control">
-            <div class="select">
-                <select name="user" id="user">
-                    {{#each users}}
-                    <option value={{id}}> {{name}}</option>
-                    {{/each}}
-                </select>
-            </div>
-
-        </div>
-    </div>
-
-
     <div class="field is-grouped">
         <div class="control">
             <button class="button is-link">Submit</button>

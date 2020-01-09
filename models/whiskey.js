@@ -20,15 +20,25 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
               len: [1]
             }
-          }
+          },
+          body: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+              len: [1,1000]
+            }
+          },
+          rating: {
+              type: DataTypes.INTEGER,
+              allowNull: false,
+              defaultValue: 1
+            },
+            favorite: {
+              type: DataTypes.BOOLEAN,
+              allowNull: false,
+              defaultValue: 0,
+            }
       });
-  
-    Whiskey.associate = function(models) {
-      
-      Whiskey.hasMany(models.Review, {
-        onDelete: "cascade"
-      });
-    };
   
     return Whiskey;
   };
