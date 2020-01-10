@@ -13,7 +13,6 @@ module.exports = function (app) {
   app.get("/viewWhiskeys", function (req, res) {
     db.Whiskey.findAll({
     }).then(function (dbWhiskeys) {
-      console.log(dbWhiskeys);
       res.render('viewWhiskeys',{
         whiskeys: dbWhiskeys
       })

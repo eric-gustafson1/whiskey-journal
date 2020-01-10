@@ -30,6 +30,19 @@ module.exports = function (app) {
     });
   });
 
+  app.delete("/api/whiskeys/:id", function(req, res) {
+    db.Whiskey.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (dbWhiskeys) {
+      res.render('viewWhiskeys',{
+        whiskeys: dbWhiskeys
+      })
+    });
+
+  });
+
   app.post("/api/addReview", function (req, res) {
     console.log(req.body)
     db.Review.create(req.body).then(function (dbAddWhiskey) {
@@ -52,27 +65,4 @@ module.exports = function (app) {
       console.log(dbAddReview)
     });
   });
-
-
-  // Delete an example by id
-  app.delete("/api/whiskey/:id", function (req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
-
-  // app.get("/api/users", function (req, res) {
-  //   // Add a join to include all of each Author's Posts
-  //   db.User.findAll({
-  //   }).then(function (dbUsers) {
-  //     res.json(dbUsers);
-  //     let usersArray = []
-  //     console.log()
-
-  //     for (let i = 0; i < dbUsers.length; i++) {
-  //       usersArray.push({ id: dbUsers[i].id, name: dbUsers[i].name })
-  //     }
-  //     console.log(usersArray);
-  //   });
-  // });
 };
