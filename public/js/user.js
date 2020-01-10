@@ -1,28 +1,19 @@
 
 $(document).ready(function () {
 
-    let username = $('#username');
-    let over21;
+    $(document).on("click", "button.delete", deleteWhiskey);
 
-    $(document).on('submit', '#adduser-form', function (event) {
-        // event.preventDefault();
-        over21 = $('#over21').find(':selected').val();
-
-        if (!username.val().trim().trim()) {
-            return;
-        }
-
-        createUser({
-            name: username.val().trim(),
-            over21: over21
-
+    function deleteWhiskey(event) {
+        event.stopPropagation();
+        var id = $(this).data("id");
+        console.log(id);
+        console.log(typeof id)
+        $.ajax({
+          method: "DELETE",
+          url: "/api/Whiskeys/" + id
+        }).then(function(){
+            location.reload();
         })
-    })
-
-    function createUser(userData) {
-        $.post("/api/addUser", userData)
-        console.log(userData)
-
-    }
+      }
 
 })
