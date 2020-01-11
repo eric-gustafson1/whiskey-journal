@@ -1,28 +1,28 @@
 <div class="container" id="view-whiskeys-filters">
 
+  <p class="label has-text-white is-large" id="view-label">Click the table headers to sort the table accordingly:</p>
   <div class="w3-container">
 
-<table id="myTable" class="w3-table-all">
-  <tr>
-    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">Whiskey</th>
-    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Type</th>
-    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Price</th>
-    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(4)')" style="cursor:pointer">Review</th>
-    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(5)')" style="cursor:pointer">Rating</th>
-    <th></th>
-  </tr>
-  {{#each whiskeys}}
-  <tr class="item">
-    <td>{{name}}</td>
-    <td>{{type}}</td>
-    <td>{{price}}</td>
-    <td>{{body}}</td>
-    <td>{{rating}}</td>
-    <td><button class="delete" data-id="{{id}}">Delete</button></td>
-  </tr>
-  {{/each}}
-</table>
-    <p class="label has-text-white is-large" id="view-label">Click the table headers to sort the table accordingly:</p>
+    <table id="myTable" class="w3-table-all">
+      <tr>
+        <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">Whiskey</th>
+        <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Type</th>
+        <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Price</th>
+        <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(4)')" style="cursor:pointer">Review</th>
+        <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(5)')" style="cursor:pointer">Rating</th>
+        <th></th>
+      </tr>
+      {{#each whiskeys}}
+      <tr class="item">
+        <td>{{name}}</td>
+        <td>{{type}}</td>
+        <td>{{price}}</td>
+        <td>{{body}}</td>
+        <td>{{rating}}</td>
+        <td><button class="delete" data-id="{{id}}">Delete</button></td>
+      </tr>
+      {{/each}}
+    </table>
   </div>
 </div>
 
