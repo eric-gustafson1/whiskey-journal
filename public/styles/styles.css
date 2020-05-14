@@ -2,6 +2,15 @@
   line-height: 2.5;
 }
 
+.navbar-title {
+  color: #4a4a4a;
+}
+
+.navbar-title:hover {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
 .bg-img {
   background-image: url("/images/bar.jpg") ;
   background-position: center center;
