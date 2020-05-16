@@ -2,6 +2,15 @@
   line-height: 2.5;
 }
 
+.navbar-title {
+  color: #4a4a4a;
+}
+
+.navbar-title:hover {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
 .bg-img {
   background-image: url("/images/bar.jpg") ;
   background-position: center center;
@@ -15,37 +24,7 @@
   margin-top: 2rem;
 }
 
-#discover-form {
-  padding: 2rem;
-  border: solid;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#new-whiskey-form {
-  padding: 2rem;
-  border: solid;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#new-user-form {
-  padding: 2rem;
-  border: solid;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#view-container {
-  padding: 2rem;
-  border: solid;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#view-whiskeys-filters {
-  padding: 2rem;
-  border: solid;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#whiskey-data {
+.styled-element {
   padding: 2rem;
   border: solid;
   background-color: rgba(0, 0, 0, 0.2);
