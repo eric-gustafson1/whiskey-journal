@@ -24,6 +24,12 @@
   margin-top: 2rem;
 }
 
+.styled-element {
+  padding: 2rem;
+  border: solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 #discover-form {
   padding: 2rem;
   border: solid;
